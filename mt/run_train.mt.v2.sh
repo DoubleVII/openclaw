@@ -90,8 +90,6 @@ DEFAULT_LOCAL_DIR=$HOME/ckpt/double7/ckpt/Qwen/Qwen2.5-3B/verl/mt/unmerged/v2
 LOG_VAL_GENERATIONS=32
 
 
-export WANDB_API_KEY=
-wandb login
 
 ray job submit \
     --runtime-env=verl/trainer/runtime_env.yaml \
