@@ -19,6 +19,9 @@ bash prepare_llamafactory.sh
 ## run sft
 
 ```bash
+# 替换配置文件中的 $HOME 为真实路径
+python path/to/openclaw/path_yaml.py path/to/openclaw/llamafactory/qwen7b/mt_rm/qwen7b_full_sft.v1.yaml
+
 # WANDB_PROJECT 没设置默认是 llamafactory
 export WANDB_NAME=qwen2.5-7b-mt_rm-sft-v1
 
