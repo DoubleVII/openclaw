@@ -32,7 +32,7 @@ FORCE_TORCHRUN=1  llamafactory-cli train path/to/openclaw/llamafactory/qwen7b/mt
 
 ```bash
 # 训完后删除检查点
-rm -rf /ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1/checkpoint-*
+rm -rf $HOME/ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1/checkpoint-*
 ```
 
 ## run verl
