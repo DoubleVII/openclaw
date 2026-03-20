@@ -1,0 +1,50 @@
+### model
+model_name_or_path: /home/nfs06/yangs/LLM/Qwen/Qwen2.5-7B 
+flash_attn: fa2
+
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: tower_zhen_qwen_sampling_group_score_gemini_distill.ranking_score_prompt.sft_rl.train,tower_zhen_cot_mt_gemini_distill.sft
+template: chatml
+cutoff_len: 12000
+# cutoff_prompt_head: true
+# max_samples: 16000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+# max_steps: 12540
+
+# default_system: "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech."
+
+### output
+output_dir: /ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1
+logging_steps: 1
+save_steps: 2500
+plot_loss: true
+overwrite_output_dir: true
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 2
+learning_rate: 6.0e-6
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+# warmup_steps: 300
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+# model_accepts_loss_kwargs: true
+
+## eval
+# eval_dataset: ted_yt_training_transcription.cot5.test.audio
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 400
