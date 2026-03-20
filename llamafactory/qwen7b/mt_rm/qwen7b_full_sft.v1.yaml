@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: /home/nfs06/yangs/LLM/Qwen/Qwen2.5-7B 
+model_name_or_path: ~/LLM/Qwen/Qwen2.5-7B 
 flash_attn: fa2
 
 
@@ -23,7 +23,7 @@ dataloader_num_workers: 4
 # default_system: "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech."
 
 ### output
-output_dir: /ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1
+output_dir: ~/ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1
 logging_steps: 1
 save_steps: 2500
 plot_loss: true
