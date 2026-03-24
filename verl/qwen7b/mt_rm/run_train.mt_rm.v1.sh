@@ -9,7 +9,7 @@ MAX_PROMPT_LENGTH=1280
 MAX_RESPONSE_LENGTH=4096
 
 # Actor/Optimization
-ACTOR_MODEL_PATH=$HOME/ckpt/double7/ckpt/Qwen/Qwen2.5-7B/sft/mt_rm/v1
+ACTOR_MODEL_PATH=$HOME/LLM/double7/qwen2.5-7b.sft.mt_rm.v1
 ACTOR_OPT_LR=6e-6
 ACTOR_LR_SCHEDULER_TYPE=constant
 ACTOR_MIN_LR_RATIO=null
